@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.7" type="plugin" group="content" method="upgrade">
+<name>Content - ViewMedica</name>
+	<author>Anthony Lobianco / Seth Wright</author>
+	<creationDate>December 2011</creationDate>
+	<copyright>Copyright (C) 2011 Swarm Interactive</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>anthony@swarminteractive.com / seth@swarminteractive.com</authorEmail>
+	<authorUrl>http://www.swarminteractive.com</authorUrl>
+	<version>1.3</version>
+	<description>PLG_VIEWMEDICA_DESCRIPTION</description>
+	<files>
+		<filename plugin="viewmedica">viewmedica.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_viewmedica.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_viewmedica.sys.ini</language>	
+	</languages>
+	<config>
+	<fields name="params">
+	<fieldset name="basic">
+		<field name="cid" type="text" default="" size="20" label="Client ID (ex. 1234)" description="Enter your Swarm Interactive client ID" />
+		<field name="secure" type="radio" default="0" label="Use secure HTTPS" description="If 'No' (default), ViewMedica player will be delivered through regular HTTP. If 'Yes', the ViewMedica will be delivered through HTTPS.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		
+		<field name="lang" type="list" default="0" label="Default language" description="Choose the language that you would like ViewMedica to load by default">	
+			<option value="0">English</option>
+			<option value="1">Spanish</option>
+			<option value="2">German</option>
+		</field>
+		
+		<field name="fullscreen" type="radio" default="0" label="Allow fullscreen mode" description="If 'Yes' (default), the 'Enlarge' button will be displayed so users can maximize the ViewMedica player to full-screen. If 'No', the 'Enlarge' button won't be displayed (usually only done when the displaying web page has problems with Flash full-screen mode).">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</field>
+		
+		<field name="enableaudio" type="radio" default="0" label="Enable audio" description="If 'Yes' (default), audio will be enabled on all animations. If 'No', audio will be disabled.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</field>
+		
+		<field name="brochure" type="radio" default="0" label="Enable brochures" description="If 'Yes' (default), users will be allowed to print brochures from within the ViewMedica animations. If 'No', the Brochure button will be turned off.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</field>
+		
+		<field name="disclaimer" type="radio" default="0" label="Enable disclaimer button" description="If 'Yes' (default), users will be able to click the Disclaimer button to read the disclaimer text. If 'No', The Disclaimer button will be turned off.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</field>	
+		
+		<field name="menu" type="radio" default="0" label="Enable menu access" description="If 'Yes' (default), navigation menu will be visible. If 'No', navigation menu will be hidden. This option is overridden if used within an article.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</field>
+		
+		<field name="size" type="text" default="580" label="Change player width" description="Change the width of the ViewMedica player (and height will adjust to keep proportions). This option is overridden if used within an article." />
+	
+	</fieldset>
+	</fields>
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="swarminteractive.com">http://www.swarminteractive.com/vmplugin/update/viewmedica_j17_update.xml</server>
+	</updateservers>
+	
+</extension>
