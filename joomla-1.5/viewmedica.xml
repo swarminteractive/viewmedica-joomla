@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.5.0" type="plugin" group="content">
+<name>Content - ViewMedica</name>
+	<author>Anthony Lobianco / Seth Wright</author>
+	<creationDate>October 2011</creationDate>
+	<copyright>Copyright (C) 2011 Swarm Interactive</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>anthony@swarminteractive.com / seth@swarminteractive.com</authorEmail>
+	<authorUrl>http://www.swarminteractive.com</authorUrl>
+	<version>1.2</version>
+	<description>PLG_VIEWMEDICA_DESCRIPTION</description>
+	<files>
+		<filename plugin="viewmedica">viewmedica.php</filename>
+	</files>
+	<languages folder="languages/en-GB">
+		<language tag="en-GB">en-GB.plg_content_viewmedica.ini</language>
+		<language tag="en-GB">en-GB.plg_content_viewmedica.sys.ini</language>	
+	</languages>
+	<params>
+		<param name="cid" type="text" default="" size="20" label="Client ID (ex. 1234)" description="Enter your Swarm Interactive client ID" />
+		<param name="secure" type="radio" default="0" label="Use secure HTTPS" description="If 'No' (default), ViewMedica player will be delivered through regular HTTP. If 'Yes', the ViewMedica will be delivered through HTTPS.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+		<param name="lang" type="list" default="0" label="Default language" description="Choose the language that you would like ViewMedica to load by default">	
+			<option value="0">English</option>
+			<option value="1">Spanish</option>
+			<option value="2">German</option>
+		</param>
+		
+		<param name="fullscreen" type="radio" default="0" label="Allow fullscreen mode" description="If 'Yes' (default), the 'Enlarge' button will be displayed so users can maximize the ViewMedica player to full-screen. If 'No', the 'Enlarge' button won't be displayed (usually only done when the displaying web page has problems with Flash full-screen mode).">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</param>
+		
+		<param name="enableaudio" type="radio" default="0" label="Enable audio" description="If 'Yes' (default), audio will be enabled on all animations. If 'No', audio will be disabled.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</param>
+		
+		<param name="brochure" type="radio" default="0" label="Enable brochures" description="If 'Yes' (default), users will be allowed to print brochures from within the ViewMedica animations. If 'No', the Brochure button will be turned off.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</param>
+		
+<!-- 		<param name="defaultmode" type="list" default="0" label="Default mode" description="If 'Default', animations will load normally. If 'Auto', the narrated version will automatically play after the animation loads. If 'Auto Only', the only play ">	 -->
+		
+		<param name="disclaimer" type="radio" default="0" label="Enable disclaimer button" description="If 'Yes' (default), users will be able to click the Disclaimer button to read the disclaimer text. If 'No', The Disclaimer button will be turned off.">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</param>				
+	</params>
+</install>
