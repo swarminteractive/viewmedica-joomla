@@ -1,6 +1,6 @@
 <?php
 /**
-  * @version	1.2
+  * @version	1.3.1
   * @package	Joomla
   * @copyright	Copyright (C) 2011, Swarm Interactive
   * @license	GNU/GPL
