@@ -183,7 +183,7 @@ class plgContentViewMedica extends JPlugin
 			}
  			
  			//set up div to be injected
- 			$vm = '<div><!-- ViewMedica Embed Start --><div id="'. $div .'"></div><script type="text/javascript" src="http'.$s.'://www.swarminteractive.com/js/vm.js"></script><script type="text/javascript">' . $client_str . $width_str . $openthis_str . $menu_str . $secure_str .  $lang_str . $fullscreen_str . $enableaudio_str . $brochure_str . $disclaimer_str . ' vm_open();</script><!-- ViewMedica Embed End --></div>'; 
+ 			$vm = '<div><!-- ViewMedica Embed Start --><div id="'. $div .'"></div><script type="text/javascript" src="https://viewmedica.com/js/vm.js"></script><script type="text/javascript">' . $client_str . $width_str . $openthis_str . $menu_str . $secure_str .  $lang_str . $fullscreen_str . $enableaudio_str . $brochure_str . $disclaimer_str . ' vm_open();</script><!-- ViewMedica Embed End --></div>'; 
 			
 			//replace the {vm=" ... "} with the injection div
 			$row->text = str_replace( '{vm="'. $fullstring .'"}', $vm, $row->text );
